@@ -13,10 +13,13 @@ public class HerenciaPersona {
 		System.out.println(persA.toString());
 		
 		Persona persB=(Persona)context.getBean("p2");
-		System.out.println(persB);
+		persB.solicitarLectura();
+	
 		
 //		Persona persC=(Persona)context.getBean("generoMasculino");
 //		System.out.println(persC);
 
 	}
+	
+	
 }

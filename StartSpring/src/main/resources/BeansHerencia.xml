@@ -13,18 +13,35 @@
 		<property name="nombre" value="Ana Isabel"/>
 		<property name="apellidos" value="Sánchez Muñoz"/>
 		<property name="dni" value="15946857-W"/>
+		<property name="tipoSuscripcion" value="basic"/>
 	</bean>
 	
 	<bean id="p2" class="ejercicio.herencia.Persona" parent="generoMasculino" scope="prototype"> 
 		<property name="nombre" value="Fernando"/>
 		<property name="apellidos" value="Jiménez Benito"/>
 		<property name="dni" value="30040057-D"/>
+		<property name="tipoSuscripcion" value="basic"/>
+	</bean>
+
+	<bean id="basic" class="ejercicio.herencia.ServicioPrensa" lazy-init="true" > 
+		<property name="periodicos" > 
+	 	<list>
+			 <value>Periodico1</value> 
+	 	</list> 
+	 </property> 
 	</bean>
 	
-	<bean id="prensa" class="ejercicio.herencia.ServicioPrensa" lazy-init="true"> 
-		<property name="nombre" value="Fernando"/>
-		<property name="apellidos" value="Jiménez Benito"/>
-		<property name="dni" value="30040057-D"/>
+	<bean id="servP" class="ejercicio.herencia.ServicioPrensa" lazy-init="true" > 
+		<property name="periodicos" > 
+	 	<list>
+			 <value>Periodico1</value> 
+			 <value>Periodico2</value> 
+			 <value>Periodico3</value> 
+			 <value>Periodico4</value> 
+			 <value>Periodico5</value> 
+			 <value>Periodico6</value> 
+	 	</list> 
+	 </property> 
 	</bean>
 	
  </beans> 
